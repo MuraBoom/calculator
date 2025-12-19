@@ -40,10 +40,11 @@ class TestDivisionOperation(unittest.TestCase):
 
 
 if __name__ == '__main__':
-
-    #создаем test suite
+    #создаем набор тестов(Test Suite)
+    #находит все методы начинающиеся с 'test_' в классе TestDivisionOperation и добавляет их в набор
     suite = unittest.TestLoader().loadTestsFromTestCase(TestDivisionOperation)
 
     #запускаем тесты с подробным выводом
     runner = unittest.TextTestRunner(verbosity=2)
     test_result = runner.run(suite)
+
