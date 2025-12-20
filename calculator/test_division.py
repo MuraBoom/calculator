@@ -18,11 +18,8 @@ class TestDivisionOperation(unittest.TestCase):
 
     def test_03_division_by_zero(self):
         #тест деления на ноль должно вернуть сообщение об ошибке
-        result = divide(10, 0)
-        expected = "ошибка: деление на ноль"
-        self.assertEqual(result, expected,
-                         f"Ошибка: должно быть '{expected}', а получили '{result}'")
-        print(f"10 / 0 = '{result}' - работает корректно")
+        self.assertRaises(ValueError, divide, 10, 0)
+        print(f"10 / 0 = ошибка деления на ноль - работает корректно")
 
     def test_04_negative_division(self):
         #тест деления отрицательных чисел -10 / 2 = -5
