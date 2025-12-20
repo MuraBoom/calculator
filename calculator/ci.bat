@@ -52,3 +52,4 @@ if exist "dist\Calculator.exe" (
 )
 
 echo DONE
+pause
