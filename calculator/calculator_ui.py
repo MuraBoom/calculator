@@ -118,7 +118,7 @@ class CalculatorUI:
         self.update_display()
     
     def clear_click(self):
-        self.calc.clear()
+        self.calc.clear_all()
         self.update_display()
     
     def delete_click(self):
