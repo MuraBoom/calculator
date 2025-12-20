@@ -34,8 +34,12 @@ if errorlevel 1 (
 
 echo 6. CREATING INSTALLER
 if exist "calculator.iss" (
-    iscc calculator.iss
-    echo Installer created
+    "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" calculator.iss
+    if exist "setup_calculator.exe" (
+        echo SUCCESS: Installer created
+    ) else (
+        echo ERROR: Failed to create installer
+    )
 ) else (
     echo WARNING: calculator.iss not found
 )
